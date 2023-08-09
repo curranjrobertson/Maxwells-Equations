@@ -9,4 +9,4 @@ function Phi = Flux_Through_Enc_Surface(q)
       q_enc = q_enc + q(i);
   end
   Phi = q_enc / e_0; % Flux through surface in Vm
-  end
+ end
