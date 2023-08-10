@@ -7,10 +7,10 @@ double fluxThroughEncSurface(vector<int> q) {
     double e_0 = 8.8541878176e-12; // permittivity of free space in coulombs per volt-meter
     int q_enc = 0; // initiate
 
-    for (int i = 1; i < q.size(); i++)
+    for (int i = 0; i < q.size(); i++)
     {
-        q[i] = q[i] * 1e-9;
         q_enc += q[i];
+        cout << q_enc << endl;
     }
     Phi = q_enc / e_0;
     return Phi; // Flux through surface in Vm
