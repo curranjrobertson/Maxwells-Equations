@@ -12,7 +12,7 @@ double fluxThroughEncSurface(vector<int> q) {
         q_enc += q[i];
         cout << q_enc << endl;
     }
-    Phi = q_enc / e_0;
+    Phi = q_enc * 1e-9 / e_0;
     return Phi; // Flux through surface in Vm
 }
 
