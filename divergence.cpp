@@ -9,7 +9,8 @@ typedef std::function<double(double)> RealFunc;
 typedef std::function<double(std::function<double(double)>, double)> RealFuncDerivative;
 
 double electricField(double x, double y, double z) {
-    return pow(x, 3) + 2.0 * pow(x, 2) + 10.0 * x - 20.0;
+    vector<double> E = {2 * x, y, z};
+    return E;
 }
 
 double partialDerivatives(RealFunc f, double x, double y, double z) {
@@ -25,10 +26,9 @@ double partialDerivatives(RealFunc f, double x, double y, double z) {
 }
 
 double divergence(double delfx, double delfy, double delfz) {
-    double i, j, k; 
-    double divF = delfx * i + delfy * j + delfz * k;
+    double divF = delfx + delfy + delfz;
 }
 
-int main() {
-
+int main(double divF) {
+    cout << "Divergence of Electric Field: " << divF << endl;
 }
