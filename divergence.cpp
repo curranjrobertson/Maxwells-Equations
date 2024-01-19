@@ -8,7 +8,11 @@ using namespace std;
 typedef std::function<double(double)> RealFunc;
 typedef std::function<double(std::function<double(double)>, double)> RealFuncDerivative;
 
-std::vector<double(double x, double y, double z)> electricField(2 * x, 3 * y, 4 * z);
+vector<double> electricField(const vector<int>& n, double x, double y, double z)
+{
+    vector<double> ret(2.0 * x, 3.0 * y, 4.0 * z);
+    return ret;
+}
 
 double partialDerivatives(RealFunc f, double x, double y, double z) {
     double h = sqrt(std::numeric_limits<double>::epsilon());
